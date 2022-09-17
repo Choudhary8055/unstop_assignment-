@@ -112,7 +112,7 @@ body {
 .trainSeat .seats .seat:not(.occupied):focus {
   cursor: pointer;
   background: #c1eac5;
-  color: #f9fffa;
+  /* color: #f9fffa; */
   transform: scale(1.2);
 }
 

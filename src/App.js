@@ -3,6 +3,9 @@ import React, { useState } from "react";
 import Train from "./components/Train";
 import ShowCase from "./components/ShowCase";
 import ShowSeat from "./components/ShowSeat";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import UserData from "./components/UserData";
+
 const trains = [
   {
     name: "Rajdhani Express",
@@ -31,6 +34,12 @@ export default function App() {
   const [selectedTrain, setSelectedTrain] = useState(trains[0]);
   const [selectedSeats, setSelectedSeats] = useState([]);
   return (
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<UserData />} />
+   </Routes>
+    
+  
     <div className="App">
       <Train
         train={selectedTrain}
@@ -58,5 +67,6 @@ export default function App() {
         </span>
       </p>
     </div>
+    </BrowserRouter>
   );
 }
